@@ -36,6 +36,19 @@ public class Queue {
         }
     }
 
+    //Dequeue method to remove element from first
+    public void dequeue(){
+        if(front == null){
+            return;
+        }
+        else if(front.next == null){
+            front = rear = null;
+        }
+        else{
+            front = front.next;
+        }
+    }
+
     //Display method to print the queue
     public void display(){
         if(front == null){
@@ -57,6 +70,15 @@ public class Queue {
         q.enqueue(56);
         q.enqueue(30);
         q.enqueue(70);
+        q.display();
+
+        q.dequeue();
+        q.display();
+
+        q.dequeue();
+        q.display();
+
+        q.dequeue();
         q.display();
     }
 
